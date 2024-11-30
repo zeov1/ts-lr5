@@ -1,0 +1,18 @@
+	MOV ax, 5
+	MOV a, ax
+	CMP a, b
+	JLE else0
+	MOV ax, 5
+	ADD ax, a
+	MOV c, ax
+	JMP endif0
+else0:
+	MOV ax, 6
+	ADD ax, a
+	MOV c, ax
+endif0:
+	MOV ax, a
+	SUB ax, 1
+	MOV a, ax
+end:
+	JMP end

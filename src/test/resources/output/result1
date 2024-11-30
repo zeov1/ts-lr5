@@ -1,0 +1,12 @@
+	CMP a, b
+	JLE else0
+	MOV ax, 5
+	ADD ax, a
+	MOV c, ax
+	JMP endif0
+else0:
+endif0:
+	MOV ax, [d + 30]
+	MOV c, ax
+end:
+	JMP end
