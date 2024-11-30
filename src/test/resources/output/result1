@@ -1,12 +1,33 @@
-	CMP a, b
-	JLE else0
-	MOV ax, 5
-	ADD ax, a
-	MOV c, ax
-	JMP endif0
-else0:
-endif0:
-	MOV ax, [d + 30]
-	MOV c, ax
+	MOV ax, 3
+	MOV a, ax
+	MOV ax, a
+	MOV b, ax
+	MOV ax, a
+	ADD ax, b
+	MOV _A_1, ax
+	MOV ax, _A_1
+	SUB ax, 0
+	MOV a_2_, ax
+	MOV ax, 15
+	MUL ax, _A_1
+	MOV _A3, ax
+	MOV ax, 16
+	DIV ax, 4
+	MOV a4a4, ax
+	MOV ax, [arr + 12]
+	OR ax, 6
+	MOV a, ax
+	MOV ax, [arr + b]
+	AND ax, 0
+	MOV x, ax
+	MOV ax, 3
+	NOT ax
+	MOV neg1, ax
+	MOV ax, a_2_
+	NOT ax
+	MOV neg2, ax
+	MOV ax, [arr + 0]
+	NOT ax
+	MOV neg3, ax
 end:
 	JMP end

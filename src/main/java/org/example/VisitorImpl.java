@@ -43,6 +43,7 @@ public class VisitorImpl extends IfElseBaseVisitor<String> {
 
     @Override
     public String visitIf_else(IfElseParser.If_elseContext ctx) {
+        System.out.printf("; IF-ELSE BLOCK №%s\n", block_cnt);
         visit(ctx.condition());
         visit(ctx.statements(0)); // IF STATEMENTS
         System.out.printf("\tJMP endif%d\nelse%d:\n", block_cnt, block_cnt);

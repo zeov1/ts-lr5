@@ -1,1 +1,25 @@
-if (a > b) { c = 5 + a; } else {} c = d[30];
+// IF-ELSE BLOCKS: 0
+// TESTING: in-line comments, identifiers, assign, +, -, *, /, |, &, ~, arrays
+
+
+// assign
+
+a = 3;
+b = a;
+
+
+// +, -, *, /
+
+_A_1 = a + b;
+a_2_ = _A_1 - 0;
+_A3  = 15 * _A_1;
+a4a4 = 16 / 4;
+
+
+// |, &, ~, arrays
+
+a = arr[12] | 6;
+x = arr[b] & 0;
+neg1 = ~3;
+neg2 = ~a_2_;
+neg3 = ~arr[0];

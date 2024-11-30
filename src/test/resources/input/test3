@@ -1,0 +1,30 @@
+// IF-ELSE BLOCKS: 5
+// TESTING: LT, EQ, NEQ, GE, LE
+
+
+if (x0 < y0) {}   // block 1 (empty)
+else {}
+
+if (x1 > y1) {    // block 2 (only if)
+    a = b;
+    c = 0;
+}
+else {
+}
+
+if (x2 > y2) {    // block 3 (only else)
+}
+else {
+    t = k;
+}
+
+if (x3 > y3) {    // block 4 (both)
+    f = y;
+}
+else {
+    g = 25;
+}
+
+if (x4 > y4)      // block 5 (both)
+{ dy = dx; }
+else { df = dg; }

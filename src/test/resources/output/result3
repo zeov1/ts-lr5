@@ -1,2 +1,46 @@
+; IF-ELSE BLOCK №0
+	CMP x0, y0
+	JGE else0
+	JMP endif0
+else0:
+endif0:
+; IF-ELSE BLOCK №1
+	CMP x1, y1
+	JLE else1
+	MOV ax, b
+	MOV a, ax
+	MOV ax, 0
+	MOV c, ax
+	JMP endif1
+else1:
+endif1:
+; IF-ELSE BLOCK №2
+	CMP x2, y2
+	JLE else2
+	JMP endif2
+else2:
+	MOV ax, k
+	MOV t, ax
+endif2:
+; IF-ELSE BLOCK №3
+	CMP x3, y3
+	JLE else3
+	MOV ax, y
+	MOV f, ax
+	JMP endif3
+else3:
+	MOV ax, 25
+	MOV g, ax
+endif3:
+; IF-ELSE BLOCK №4
+	CMP x4, y4
+	JLE else4
+	MOV ax, dx
+	MOV dy, ax
+	JMP endif4
+else4:
+	MOV ax, dg
+	MOV df, ax
+endif4:
 end:
 	JMP end

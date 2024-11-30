@@ -1,8 +1,12 @@
+// IF-ELSE BLOCKS: 1
+// TESTING: if-else, GT
+
+
 a = 5;
 if (a > b) {
     c = 5 + a;
+    t = 0;
 }
 else {
-    c = 6 + a;
+    a = a - ARR_3[index];
 }
-a = a - 1;
