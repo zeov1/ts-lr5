@@ -3,22 +3,6 @@
 <statement> ::= <assignment> | <if_else>
 <assignment> ::= <identifier> '=' <expression> ';'
 <if_else> ::= 'if' '(' <condition> ')' '{' <statements> '}' 'else' '{' <statements> '}'
-<condition> ::= <expression> <comparison_operator> <expression>
-<expression> ::= <identifier> | <constant> | <expression> <logical_operator> <expression> | <identifier> '[' <expression> ']' | <expression> <arithmetic_operator> <expression>
-<identifier> ::= <letter> | <identifier> <letter> | <identifier> <digit>
-<constant> ::= <digit> | <digit> <constant>
-<arithmetic_operator> ::= '+' | '-' | '*' | '/'
-<logical_operator> ::= '&&' | '||' | '!'
-<comparison_operator> ::= '==' | '!=' | '>' | '<' | '>=' | '<='
-<letter> ::= 'a' | 'b' | ... | 'z' | 'A' | 'B' | ... | 'Z'
-<digit> ::= '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
-
-
-<program> ::= <statements>
-<statements> ::= <statement> | <statement> <statements> | ε
-<statement> ::= <assignment> | <if_else>
-<assignment> ::= <identifier> '=' <expression> ';'
-<if_else> ::= 'if' '(' <condition> ')' '{' <statements> '}' 'else' '{' <statements> '}'
 <condition> ::= <operand> '==' <operand> | <operand> '!=' <operand> | <operand> '>=' <operand> | <operand> '<=' <operand> | <operand> '>' <operand> | <operand> '<' <operand>
 <expression> ::= <operand> | <operand> '+' <operand> | <operand> '-' <operand> | <operand> '*' <operand> | <operand> '/' <operand> | <operand> '&' <operand> | <operand> '|' <operand> | 'NOT' <operand>
 <operand> ::= <constant> | <identifier> | <identifier> '[' <identifier> ']' | <identifier> '[' <constant> ']'
