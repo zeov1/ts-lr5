@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VisitorImplTest {
     @Test
-    public void test() throws IOException {
+    public void test_all() throws IOException {
         List<Path> inputFiles = Files.list(Paths.get("src/test/resources/input/")).toList();
         for (int i = 0; i < inputFiles.size(); i++) {
             Path inputFilePath = inputFiles.get(i);
@@ -46,5 +46,30 @@ class VisitorImplTest {
             VisitorImpl visitor = new VisitorImpl();
             visitor.visit(tree);
         }
+    }
+
+    @Test
+    public void test_one() throws IOException {
+
+        Path inputFilePath = Path.of("src/test/resources/input/test6_wrong");
+        String outputFilePath = "src/test/resources/output/result" + (6);
+
+        FileOutputStream fos = new FileOutputStream(outputFilePath);
+        PrintStream ps = new PrintStream(fos);
+        System.setOut(ps);
+
+        String content = Files.readString(inputFilePath);
+        content = content.replace("\r", "");
+
+        CharStream stream = CharStreams.fromString(content);
+
+        IfElseLexer lexer = new IfElseLexer(stream);
+        TokenStream tokens = new CommonTokenStream(lexer);
+
+        IfElseParser parser = new IfElseParser(tokens);
+        ParseTree tree = parser.program();
+
+        VisitorImpl visitor = new VisitorImpl();
+        visitor.visit(tree);
     }
 }
