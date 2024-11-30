@@ -1,0 +1,9 @@
+// WRONG IF-ELSE
+
+if {
+    a = b;
+}
+else {
+    c = 0;
+}
+

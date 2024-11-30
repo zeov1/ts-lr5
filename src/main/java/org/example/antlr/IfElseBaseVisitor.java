@@ -1,4 +1,4 @@
-// Generated from C:/Projects/IdeaProjects/ANTLR-tutorial/grammars/IfElse.g4 by ANTLR 4.13.2
+// Generated from C:/Projects/IdeaProjects/ts-lr5/grammars/IfElse.g4 by ANTLR 4.13.2
 package org.example.antlr;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
@@ -46,7 +46,14 @@ public class IfElseBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIf_else(IfElseParser.If_elseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIfElse(IfElseParser.IfElseContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitWrongIfElse(IfElseParser.WrongIfElseContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -89,4 +96,11 @@ public class IfElseBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitArray(IfElseParser.ArrayContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitWrongArray(IfElseParser.WrongArrayContext ctx) { return visitChildren(ctx); }
 }

@@ -32,7 +32,9 @@ statement   : assignment | if_else;
 
 assignment  : IDENTIFIER ASSIGN expression ';';
 
-if_else     : IF '(' condition ')' '{' statements '}' ELSE '{' statements '}';
+if_else     : IF '(' condition ')' '{' statements '}' ELSE '{' statements '}' # IfElse
+            | IF '{' statements '}' ELSE '{' statements '}'                   # WrongIfElse
+            ;
 
 condition   : operand op = (EQ | NEQ | GT | LT | GE | LE) operand;
 
@@ -43,4 +45,9 @@ expression  : operand                                     # SimpleExplession
 
 operand     : (CONSTANT | IDENTIFIER)                               # Literal
             | IDENTIFIER ('[' index=(IDENTIFIER | CONSTANT) ']')?   # Array
+            | (
+                IDENTIFIER (index=(IDENTIFIER | CONSTANT) ']')?
+                | IDENTIFIER ('[' index=(IDENTIFIER | CONSTANT))?
+                | IDENTIFIER ('[]')?
+            )                                                       # WrongArray
             ;

@@ -1,0 +1,4 @@
+	MOV ax, null
+	MOV a, ax
+end:
+	JMP end

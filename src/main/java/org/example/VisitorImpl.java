@@ -42,7 +42,7 @@ public class VisitorImpl extends IfElseBaseVisitor<String> {
     }
 
     @Override
-    public String visitIf_else(IfElseParser.If_elseContext ctx) {
+    public String visitIfElse(IfElseParser.IfElseContext ctx) {
         System.out.printf("; IF-ELSE BLOCK №%s\n", block_cnt);
         visit(ctx.condition());
         visit(ctx.statements(0)); // IF STATEMENTS
@@ -96,6 +96,20 @@ public class VisitorImpl extends IfElseBaseVisitor<String> {
         String ID = ctx.IDENTIFIER(0).getText();
         String index = ctx.index.getText();
         return String.format("[%s + %s]", ID, index);
+    }
+
+    @Override
+    public String visitWrongIfElse(IfElseParser.WrongIfElseContext ctx) {
+        System.err.println("ERROR! Missing condition for if-else block:");
+        System.err.println(ctx.getText());
+        return null;
+    }
+
+    @Override
+    public String visitWrongArray(IfElseParser.WrongArrayContext ctx) {
+        System.err.println("ERROR! Wrong array usage:");
+        System.err.println(ctx.getText());
+        return null;
     }
 
     @Override

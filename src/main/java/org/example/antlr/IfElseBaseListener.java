@@ -1,4 +1,4 @@
-// Generated from C:/Projects/IdeaProjects/ANTLR-tutorial/grammars/IfElse.g4 by ANTLR 4.13.2
+// Generated from C:/Projects/IdeaProjects/ts-lr5/grammars/IfElse.g4 by ANTLR 4.13.2
 package org.example.antlr;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -65,13 +65,25 @@ public class IfElseBaseListener implements IfElseListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIf_else(IfElseParser.If_elseContext ctx) { }
+	@Override public void enterIfElse(IfElseParser.IfElseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIf_else(IfElseParser.If_elseContext ctx) { }
+	@Override public void exitIfElse(IfElseParser.IfElseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWrongIfElse(IfElseParser.WrongIfElseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWrongIfElse(IfElseParser.WrongIfElseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -144,6 +156,18 @@ public class IfElseBaseListener implements IfElseListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArray(IfElseParser.ArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWrongArray(IfElseParser.WrongArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWrongArray(IfElseParser.WrongArrayContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
